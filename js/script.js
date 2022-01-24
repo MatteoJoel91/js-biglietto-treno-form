@@ -93,11 +93,10 @@ buttonGenera.addEventListener('click',
 // Bottone Annulla
 buttonAnnulla.addEventListener('click',
     function(){
-
+        
         let visibile = document.getElementById("sezione");
         visibile.classList.add("hide"); 
         
-        document.getElementById('name').innerHTML = ('');
+        buttonAnnulla = window.location.reload();
     }
-    
 );
