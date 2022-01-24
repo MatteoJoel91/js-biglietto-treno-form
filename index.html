@@ -15,20 +15,31 @@
         </h1>
     </div>
     <div id="container-top">
-        <div class="form">
-            <input class="test" type="text" id="name" placeholder="Nome e Cognome">
-            <input class="test" type="number" id="number" placeholder="Chilometri">
-            <select id="eta" class="test">
-                <option value="">Seleziona età</option>
-                <option value="Minorenne">Minorenne</option>
-                <option value="Maggiorenne">Maggiorenne</option>
-                <option value="Over-65">Over 65</option>
-            </select>
-            
+        <div class="row">
+            <div class="col">
+                <label class="style-label" for="name">Nome Cognome</label>
+                <input class="input-style" type="text" id="name" placeholder="Nome e Cognome">
+            </div>
+            <div class="col">
+                <label class="style-label" for="">Km da percorrere</label>
+                <input class="input-style" type="number" id="number" placeholder="Chilometri">
+            </div>
+            <div class="col">
+                <label class="style-label" for="">Fascia d'età</label>
+                <select id="eta" class="input-style">
+                    <option value="">Fascia d'età</option>
+                    <option value="Minorenne">Minorenne</option>
+                    <option value="Maggiorenne">Maggiorenne</option>
+                    <option value="Over-65">Over 65</option>
+                </select>
+            </div>
         </div>
-        
-        
-        
+          
+        <div class="row">
+            <button class="button-style" id="elabora">Genera</button>
+            <button class="button-style" id="elabora">Annulla</button>
+        </div>
+
     </div>
 
 
@@ -39,7 +50,35 @@
         </h1>
     </div>
     <div id="container-bot">
+        <h2 class="margine">
+            DETTAGLIO PASSEGGIERI
+        </h2>
 
+        <div class="dettagli-passeggieri">
+
+           <div class="nome-passeggiero">
+               <h4>NOME PASSEGGERO</h4>
+               <p id="ID_passeggiero"></p>
+           </div>
+
+           <div class="info">
+               <table>
+                   <tr>
+                       <th>Offerta</th>
+                       <th>Carrozza</th>
+                       <th>Codice CP</th>
+                       <th>Costo biglietto</th>
+                   </tr>
+                   <tr>
+                       <td id="tipo_biglietto">test</td>
+                       <td id="numero_carrozza">test</td>
+                       <td id="codice_cp">test</td>
+                       <td id="costo_biglietto">test</td>
+                   </tr>
+               </table>
+           </div>
+
+       </div>
     </div>
 
 
