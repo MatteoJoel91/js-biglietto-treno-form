@@ -22,7 +22,7 @@
             </div>
             <div class="col">
                 <label class="style-label" for="">Km da percorrere</label>
-                <input class="input-style" type="number" id="number" placeholder="Chilometri">
+                <input class="input-style" type="number" id="km" min="0" placeholder="Chilometri">
             </div>
             <div class="col">
                 <label class="style-label" for="">Fascia d'età</label>
@@ -36,15 +36,15 @@
         </div>
           
         <div class="row">
-            <button class="button-style" id="elabora">Genera</button>
-            <button class="button-style" id="elabora">Annulla</button>
+            <button class="button-style" id="genera">Genera</button>
+            <button class="button-style" id="annulla">Annulla</button>
         </div>
 
     </div>
 
 
-
-    <div class="titolo">
+    <div id="hide">
+        <div class="titolo">
         <h1>
             IL TUO BIGLIETTO
         </h1>
@@ -60,9 +60,9 @@
                 <h4>
                    NOME PASSEGGERO
                 </h4>
-                <h3 id="ID_passeggiero">
-                    
-                </h3>
+                <h5 id="ID_passeggiero">
+
+                </h5>
            </div>
 
            <div class="info">
@@ -74,16 +74,18 @@
                        <th>Costo biglietto</th>
                    </tr>
                    <tr>
-                       <td id="tipo_biglietto">test</td>
-                       <td id="numero_carrozza">test</td>
-                       <td id="codice_cp">test</td>
-                       <td id="costo_biglietto">test</td>
+                       <td id="tipo_biglietto"></td>
+                       <td id="numero_carrozza"></td>
+                       <td id="codice_cp"></td>
+                       <td id="costo_biglietto"></td>
                    </tr>
                </table>
            </div>
 
        </div>
     </div>
+    </div>
+    
 
 
 
