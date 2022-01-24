@@ -12,15 +12,23 @@ buttonGenera.addEventListener('click',
         let km = document.getElementById('km').value;
         let eta = document.getElementById('eta').value;
 
+        // Variabile per la id="sezione" class"Hide"
+        let visibile = document.getElementById("sezione");
+
         // Condizione di controllo
         if (name == "") {
             alert('Scrvi il tuo Nome/Cognome');
+            visibile.classList.add("hide");
         } else {
             document.getElementById('ID_passeggiero').innerHTML = name;
+            visibile.classList.remove("hide");
         }
 
         if (km == "") {
             alert('Scrvi il numero dei chilometri');
+            visibile.classList.add("hide");
+        } else{
+            visibile.classList.remove("hide");
         }
 
         // Prezzo per kilometro
@@ -64,6 +72,7 @@ buttonGenera.addEventListener('click',
         }
         else{
             alert('Dichiara fascia d\'età');
+            visibile.classList.add("hide");
         }
         
         
@@ -76,10 +85,7 @@ buttonGenera.addEventListener('click',
         let min=99999;
         let randomCodice = Math.floor(Math.random() * (max - min + 1)) + min;
         document.getElementById("codice_cp").innerHTML = randomCodice;
-
-        // Rendo visibile la sezione dove ci sono  idettagli del biglietto
-        let visibile = document.getElementById("sezione");
-        visibile.classList.remove("hide");
+        
     }
 );
 
