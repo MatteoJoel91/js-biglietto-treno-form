@@ -3,16 +3,24 @@
 let buttonGenera = document.getElementById("genera");
 let buttonAnnulla = document.getElementById("annulla");
 
+// Bottone Genera
 buttonGenera.addEventListener('click',    
     function() {
+
+        // Dichiaro le variabili
         let name = document.getElementById('name').value;
         let km = document.getElementById('km').value;
         let eta = document.getElementById('eta').value;
 
-        if (name.value == "") {
+        // Condizione di controllo
+        if (name == "") {
             alert('Scrvi il tuo Nome/Cognome');
         } else {
             document.getElementById('ID_passeggiero').innerHTML = name;
+        }
+
+        if (km == "") {
+            alert('Scrvi il numero dei chilometri');
         }
 
         // Prezzo per kilometro
@@ -35,7 +43,7 @@ buttonGenera.addEventListener('click',
 
         let bigliettoMinorenni = ('Sconto 20%');
 
-        let BigliettoOver = ('Sconto 40%');
+        let bigliettoOver = ('Sconto 40%');
 
         // Calcolo del prezzo finale in base ad età con relativo sconto applicato
         if(eta == 'Minorenne'){
@@ -47,17 +55,43 @@ buttonGenera.addEventListener('click',
         else if (eta == 'Over-65'){
             let prezzoFinale = prezzoBiglietto - sconto40;
             console.log(prezzoFinale);
-            document.getElementById('tipo_biglietto').innerHTML = BigliettoOver;
+            document.getElementById('tipo_biglietto').innerHTML = bigliettoOver;
             document.getElementById('costo_biglietto').innerHTML = prezzoFinale.toFixed(2);
         }
-        else{
+        else if (eta == 'Maggiorenne'){
             document.getElementById('tipo_biglietto').innerHTML = bigliettoNormale;
             document.getElementById('costo_biglietto').innerHTML = prezzoBiglietto.toFixed(2);
         }
+        else{
+            alert('Dichiara fascia d\'età');
+        }
         
+        
+        // Numero random della carrozza
+        let randomCarrozza = Math.floor(Math.random() * 9 +1);
+        document.getElementById("numero_carrozza").innerHTML = randomCarrozza;
+
+        // Numero random del codice cp
+        let max=90000;
+        let min=99999;
+        let randomCodice = Math.floor(Math.random() * (max - min + 1)) + min;
+        document.getElementById("codice_cp").innerHTML = randomCodice;
+
+        // Rendo visibile la sezione dove ci sono  idettagli del biglietto
+        let visibile = document.getElementById("sezione");
+        visibile.classList.remove("hide");
     }
 );
 
 
+// Bottone Annulla
+buttonAnnulla.addEventListener('click',
+    function(){
 
-
+        let visibile = document.getElementById("sezione");
+        visibile.classList.add("hide"); 
+        
+        document.getElementById('name').innerHTML = ('');
+    }
+    
+);

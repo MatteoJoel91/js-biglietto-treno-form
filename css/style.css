@@ -78,6 +78,10 @@ h1{
 
 
 /* Container BOT */
+.hide{
+    visibility: hidden;
+}
+
 #container-bot{
     width: 60%;
     margin: 10px auto;
