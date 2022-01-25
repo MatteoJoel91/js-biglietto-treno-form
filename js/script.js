@@ -20,7 +20,7 @@ buttonGenera.addEventListener('click',
         // Variabile per la id="sezione" class"Hide"
         let visibile = document.getElementById("sezione");
 
-        // Condizione di controllo
+        // Condizione di controllo per il nome
         if (name == "") {
             alert('Scrvi il tuo Nome/Cognome');
             visibile.classList.add("hide");
@@ -29,6 +29,7 @@ buttonGenera.addEventListener('click',
             visibile.classList.remove("hide");
         }
 
+        // Condizione di controllo per i Km
         if (km == "") {
             alert('Scrvi il numero dei chilometri');
             visibile.classList.add("hide");
@@ -75,6 +76,7 @@ buttonGenera.addEventListener('click',
             document.getElementById('tipo_biglietto').innerHTML = bigliettoNormale;
             document.getElementById('costo_biglietto').innerHTML = prezzoBiglietto.toFixed(2);
         }
+        // Condizione di controllo per età
         else{
             alert('Dichiara fascia d\'età');
             visibile.classList.add("hide");
