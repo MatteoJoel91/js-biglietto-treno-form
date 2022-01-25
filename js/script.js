@@ -88,9 +88,9 @@ buttonGenera.addEventListener('click',
         document.getElementById("numero_carrozza").innerHTML = randomCarrozza;
 
         // Numero random del codice cp
-        let min=90000;
-        let max=99999;
-        let randomCodice = Math.floor(Math.random() * (max - min + 1)) + min;
+        min=90000;
+        max=99999;
+        let randomCodice = Math.floor(Math.random() * (max - min)) + min;
         document.getElementById("codice_cp").innerHTML = randomCodice;
         
     }
